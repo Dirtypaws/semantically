@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="2.612">
+  <testsuite name="Aggregate Repository: " errors="0" failures="0" skipped="0" timestamp="2022-04-14T02:56:17" time="2.286" tests="5">
+    <testcase classname="Aggregate Repository:  Get should return null" name="Aggregate Repository:  Get should return null" time="0.002">
+    </testcase>
+    <testcase classname="Aggregate Repository:  Get should return a domain object" name="Aggregate Repository:  Get should return a domain object" time="0.001">
+    </testcase>
+    <testcase classname="Aggregate Repository:  Save should handle no handlers" name="Aggregate Repository:  Save should handle no handlers" time="0.001">
+    </testcase>
+    <testcase classname="Aggregate Repository:  Save should handle a single event" name="Aggregate Repository:  Save should handle a single event" time="0.001">
+    </testcase>
+    <testcase classname="Aggregate Repository:  Save should call multiple handlers" name="Aggregate Repository:  Save should call multiple handlers" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

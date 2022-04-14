@@ -1,0 +1,49 @@
+{
+  "name": "semantically",
+  "version": "1.0.0",
+  "description": "CQRS/Event Sourcing library for coding semantically",
+  "main": "dist/index.js",
+  "workspaces": {
+    "src": [
+      "./src"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Matthew Krizanac",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags",
+    "lint": "eslint \"**/src/**/*.{js,ts}\"",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "6.12.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-alias": "^1.2.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "jest": "^27.5.1",
+    "jest-junit": "^13.1.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/events": "^3.0.0",
+    "@types/uuid": "^8.3.4",
+    "events": "^3.3.0",
+    "uuid": "^8.3.2"
+  }
+}
