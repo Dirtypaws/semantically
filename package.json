@@ -13,10 +13,6 @@
     "test": "jest",
     "refresh": "rm -rf ./node_modules && yarn install"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://ThinkLinq@dev.azure.com/ThinkLinq/SharedServices/_git/SharedServices"
-  },
   "keywords": [
     "semantically",
     "semantics",
