@@ -29,3 +29,9 @@ steps:
       PathtoPublish: "$(Build.SourcesDirectory)/dist"
       ArtifactName: "dist"
       publishLocation: "Container"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.SourcesDirectory)/package.json"
+      ArtifactName: "dist"
+      publishLocation: "Container"
