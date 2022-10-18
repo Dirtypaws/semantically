@@ -4,28 +4,30 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+  - main
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '16.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "16.x"
+    displayName: "Install Node.js"
 
-- script: |
-    yarn install
-    yarn prepare
-  displayName: 'install and prepare the binaries'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
-    ArtifactName: 'dist'
-    publishLocation: 'Container'
-- task: Npm@1
-  inputs:
-    command: 'publish'
-    publishRegistry: 'useFeed'
-    publishFeed: 'cf0b9a5f-4ef4-4b1d-9b69-00fed5aeb380/a908ffb5-9701-45d9-a351-a40c9382b2e5'
+  - task: npmAuthenticate@0
+    inputs:
+      workingFile: .npmrc
+
+  - script: |
+      yarn install
+      yarn prepare
+    displayName: "install and prepare the binaries"
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)/dist"
+      ArtifactName: "dist"
+      publishLocation: "Container"
+  - script: |
+      yarn publish
+    displayName: Publish to artifact feed
