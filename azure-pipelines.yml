@@ -23,11 +23,9 @@ steps:
       yarn install
       yarn prepare
     displayName: "install and prepare the binaries"
+
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: "$(Build.ArtifactStagingDirectory)/dist"
       ArtifactName: "dist"
       publishLocation: "Container"
-  - script: |
-      yarn publish
-    displayName: Publish to artifact feed
