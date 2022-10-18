@@ -24,3 +24,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
     ArtifactName: 'dist'
     publishLocation: 'Container'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: 'cf0b9a5f-4ef4-4b1d-9b69-00fed5aeb380/a908ffb5-9701-45d9-a351-a40c9382b2e5'
