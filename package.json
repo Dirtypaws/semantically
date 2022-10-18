@@ -1,0 +1,39 @@
+{
+  "name": "semantically",
+  "version": "0.0.1",
+  "description": "A helpful library facilitating Event Sourcing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "semantically": "dist/index.js"
+  },
+  "scripts": {
+    "prepare": "rm -rf dist && tsc -p tsconfig.json",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest",
+    "refresh": "rm -rf ./node_modules && yarn install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ThinkLinq@dev.azure.com/ThinkLinq/SharedServices/_git/SharedServices"
+  },
+  "keywords": [
+    "semantically",
+    "semantics",
+    "event",
+    "driven",
+    "cqrs"
+  ],
+  "author": "LINQ",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/luxon": "^3.0.2",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "@types/uuid": "^8.3.4",
+    "luxon": "^3.0.4",
+    "uuid": "^8.3.2"
+  }
+}

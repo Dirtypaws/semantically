@@ -1,0 +1,41 @@
+.DS_Store
+
+# log files and directories
+logs
+*.log
+
+# package directories
+node_modules
+
+# build directories
+.build
+dist
+.generated
+src/gen
+.webpack
+
+# Serverless directories
+.serverless
+.dynamodb
+**/src/gen
+
+# Editor backup files
+*.bak
+*~
+*.swp
+
+# Code coverage files
+.nyc_output
+coverage
+
+# test reports
+testReports
+junit.xml
+.jest/apiIntegration.js
+**/out
+
+# SonarQube directories and files
+.scannerwork
+
+__MACOSX
+demo.in
