@@ -19,5 +19,5 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
-  "exclude": [".build", ".serverless", ".webpack", "dist", "node_modules"]
+  "exclude": [".build", ".serverless", ".webpack", "node_modules"]
 }

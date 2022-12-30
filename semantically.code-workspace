@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "@linq/semantically",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "cSpell.words": ["linq"]
+  }
+}

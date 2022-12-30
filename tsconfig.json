@@ -2,7 +2,10 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "esModuleInterop": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "paths": {
+      "@linq/semantically": ["./src/index"]
+    }
   },
   "include": ["./src/**/*"]
 }
